@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Sombrero Pintao Panameño</title>
+    <meta name="author" content="Saúl Abrego">
+    <meta name="Cédula" content="9-764-1453">
+    <meta name="description" content="Proyecto Final - Página web sobre el sombrero pintao">
+</head>
+<body>
+    <div id="wrapper"> <!-- Lista de contenidos -->   
+        <header>
+            <hgroup>
+                <h1>El Sombrero Pintao Panameño</h1>
+                <nav>
+                    <ul>
+                        <li><a href="#origenes">Orígenes</a></li>
+                        <li><a href="#proceso">Proceso de Elaboración</a></li>
+                        <li><a href="#tipos">Tipos de Sombreros</a></li>
+                        <li><a href="#galeria">Galería</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                    </ul>
+                </nav>
+            </hgroup>
+        </header>
+
+        <section id="origenes">
+            <h2>Orígenes</h2>
+            <article>
+                <p>Aqui escribir contenido......</p>
+            </article>
+        </section>
+
+        <section id="proceso">
+            <h2>Proceso de Elaboración</h2>
+            <article>
+                <p>Aqui escribir contenido......</p>
+            </article>
+        </section>
+
+        <section id="tipos">
+            <h2>Tipos de Sombreros</h2>
+            <article>
+                <p>Aqui escribir contenido...</p>
+            </article>
+        </section>
+
+        <section id="galeria"> <!-- Galeria de imagenes y contenido multimedia -->
+            <h2>Galería</h2>
+            <figure>
+                <img src="C:\Proyecto_HTML_Sombrero\Sombrero1.jpg" alt="Sombrero Pintao Ejemplo 1" height="150px">
+                <figcaption>Sombrero pintao de 16 vueltas</figcaption>
+            </figure>
+            <figure>
+                <img src="C:\Proyecto_HTML_Sombrero\Sombrero2.jpg" alt="Sombrero Pintao Ejemplo 2" height="150px">
+                <figcaption>Artesano trabajando en un sombrero pintao</figcaption>
+            </figure>
+        </section>
+
+        <section id="contacto"> <!-- Formulario de contacto -->
+            <h2>Contacto</h2>
+            <aside>
+                <p>Si deseas más información, contáctanos a través del siguiente formulario:</p>
+            </aside>
+            <form >
+                <!-- Campo de nombre con validación requerida y placeholder -->
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre completo" required>
+                <br><br>
+        
+                <!-- Campo de correo electrónico con validación requerida -->
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="correo@ejemplo.com" required>
+                <br><br>
+        
+                <!-- Campo de teléfono con validación de patrón y ayuda contextual -->
+                <label for="telefono">Teléfono:</label>
+                <input type="tel" id="telefono" name="telefono" placeholder="123-456-7890" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" title="Formato: 123-456-7890">
+                <br><br>
+        
+                <!-- Área de texto con validación -->
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" name="mensaje" placeholder="Escribe tu mensaje aquí" required></textarea>
+                <br><br>
+        
+                <!-- Botón de envío -->
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+
+        <footer>
+            <p>&copy; 2024 El Sombrero Pintao Panameño. Todos los derechos reservados.</p>
+        </footer>
+    </div>
+</body>
+</html>
