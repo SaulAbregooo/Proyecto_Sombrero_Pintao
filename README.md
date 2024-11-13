@@ -41,4 +41,4 @@ Esta página web está dedicada a explorar los origenes, el proceso de elaboraci
  - Asegurarse la correcta utilizacion de los diferente elementos dentro del HTML.
 
 ### Enlace a la pagina
-<P> Enlace a la pagina, [Aqui](https://saulabregooo.github.io/Proyecto_Sombrero_Pintao/)</P>
+<P> Enlace a la pagina, [Aqui](https://saulabregooo.github.io/Proyecto_Sombrero_Pintao/Proyecto_Sombrero.html)</P>
