@@ -1,32 +1,29 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>El Sombrero Pintao Panameño</title>
-    <meta name="author" content="Saúl Abrego">
-    <meta name="Cédula" content="9-764-1453">
-    <meta name="description" content="Proyecto Final - Página web sobre el sombrero pintao">
-</head>
-<body>
-    <div id="wrapper"> <!-- Lista de contenidos -->   
-        <header>
-            <hgroup>
-                <header>
-                    <h1>El Sombrero Pintao Panameño</h1>
-                </header>
-                <nav>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Saúl Abrego">
+        <meta name="description" content="Proyecto Final - Página web sobre el sombrero pintao">
+        <meta name="keywords" content="sombrero pintao, Panamá, cultura, tradición, artesanía">
+        <title>El Sombrero Pintao Panameño</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <div id="wrapper">
+            <header>
+                <h1>El Sombrero Pintao Panameño</h1>
+                <nav role="navigation">
                     <ul>
                         <li><a href="#origenes">Orígenes</a></li>
                         <li><a href="#proceso">Proceso de Elaboración</a></li>
                         <li><a href="#tipos">Tipos de Sombreros</a></li>
-                        <li><a href="#Utilizacion">Forma de utilizar el sombrer y su significado</li>
-                        <li><a href="#galeria">Galería</a></li>
+                        <li><a href="#Utilizacion">Forma de utilizar el sombrero y su significado</a></li>
+                        <li><a href="#Multimedia">Multimedia</a></li>
                         <li><a href="#contacto">Contacto</a></li>
                     </ul>
                 </nav>
-            </hgroup>
-        </header>
+            </header>
 
         <section id="origenes">
             <article>
@@ -290,10 +287,30 @@
             </tbody>
         </table>
         
-        <section id="galeria"> <!-- Galeria de imagenes y contenido multimedia -->
+        <section id="Multimedia"> <!-- Galeria de imagenes y contenido multimedia -->
             <header>
-                <h2>Galería</h2>
+                <h2>Multimedia</h2>
             </header>
+
+            <article>
+                <header>
+                    <h3>Mi sombrero - Angélica De La Cruz</h3>
+                </header>
+                <audio src="audio\Cumbia chorrerana - Mi sombrero - Angélica De La Cruz - Música folclórica de Panamá.mp3" controls preload autoplay loop></audio>
+            </article>
+    
+            <article>
+                <header>
+                    <h3>Tipos de sombreros y cómo se diferencian</h3>
+                </header>
+                <video src="video\Sombrero Pinta'o - Tipi Tips Panamá (1080p, h264).mp4" controls preload width="640" height="480"
+                poster="video\portada02.png"></video>
+            </article>
+            
+            <header>
+                <h3>Galería</h3>
+            </header>
+
             <figure>
                 <img src="./img/Sombrero1.png" alt="Sombrero Pintao Ejemplo 1" height="200px">
                 <figcaption>Sombrero pintao de 16 vueltas</figcaption>
@@ -301,6 +318,11 @@
             <figure>
                 <img src="./img/Sombrero2.jpg" alt="Sombrero Pintao Ejemplo 2" height="200px">
                 <figcaption>Artesano trabajando en un sombrero pintao</figcaption>
+            </figure>
+
+            <figure>
+                <img src="img\sombreromat.jpg" alt="Sombrero Pintao Ejemplo 3" height="200px">
+                <figcaption>Sombrero junto con su material de confección.</figcaption>
             </figure>
         </section>
 
