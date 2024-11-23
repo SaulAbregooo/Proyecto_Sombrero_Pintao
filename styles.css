@@ -1,0 +1,373 @@
+/* Variables globales para ser utilizadas de manera global */
+:root {
+    --primary-color: #000000; /* Color principal */
+    --secondary-color: #2c2929; /* Fondo */
+    --text-color: #333333; /* Color de texto principal */
+    --font-family: 'Arial', sans-serif; /* Fuente*/
+    --font-size-base: 16px; /* Tamaño de fuente base */
+    --spacing-unit: 1rem; /* Unidad de espaciado (en rem) */
+}
+
+/* Reset pora cambiar valores que da el navegador*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Asegurar que el elemento <html> ocupe el 100% del ancho del viewport(pantalla visible)*/
+html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100%; /* Asegura que el contenido llene la altura */
+    overflow-x: hidden; /* Previene desbordamiento horizontal */
+}
+
+section, header {
+    width: 100%;
+    margin: 0;
+    padding: 1rem; 
+    box-sizing: border-box; /* Evita que los paddings afecten el ancho */
+}
+
+
+body {
+    font-family: var(--font-family);
+    font-size: var(--font-size-base);
+    line-height: 1.5;
+    color: var(--text-color);
+    background-color: var(--secondary-color);
+    padding: var(--spacing-unit);
+}
+
+h1 {
+    font-size: 2rem;
+    background-color: #000000;
+    background-image: url('img/fondoh1.jpg');
+    background-size: cover; /* La imagen debe cubrir todo el área del h1 */
+    background-position: center center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita la repetición de la imagen */
+   padding: 5rem; /* Aumenta el espacio interno */
+}
+
+
+h2 {
+    font-size: 2rem; /* Tamaño de fuente grande */
+    color: var(--primary-color); /* Color del texto */
+    text-align: center; /* Centra el texto */
+    margin: 2% 0; /* Espaciado vertical alrededor del título */
+    padding: 0.5rem; /* Un poco de espacio interno */
+    font-family: 'Georgia', serif; /* Fuente serif elegante */
+    text-transform: uppercase; /* Convierte el texto a mayúsculas */
+    letter-spacing: 0.1rem; /* Espaciado entre letras */
+    border-bottom: 2px solid var(--primary-color); /* Línea debajo del título */
+    transition: color 0.3s ease, transform 0.3s ease; /* Transición suave para efectos */
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+
+/* Efecto cuando el ratón pasa sobre el título */
+h2:hover {
+    color: #333; /* Cambia el color del texto */
+    transform: scale(1.05); /* Agranda ligeramente el texto */
+}
+
+/* Estilo para las listas (listas desordenadas) y <ol> (listas ordenadas)*/
+ul, ol {
+    margin: var(--spacing-unit) 0;
+    padding-left: 5%; /* Usamos porcentaje para mejor adaptabilidad */
+}
+
+/*Estable los puntos de referencia a las listas desordenadas*/
+ul li {
+    list-style-type: disc;
+}
+/*Estable los numeros de referencia a las listas ordenadas*/
+ol li {
+    list-style-type: decimal;
+}
+
+/*Añade un margen inferior a cada elemento de lista para separar los ítems verticalmente*/
+li {
+    margin-bottom: var(--spacing-unit);
+}
+
+
+/* Tabla del sombrero*/
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: var(--spacing-unit) 0;
+    background-color: #ffffff;
+}
+
+
+/*titulo de la tabla*/
+caption {
+    font-family: 'Georgia', serif; /* Fuente elegante */
+    font-size: 120%; /* Tamaño relativo al contenedor */
+    color: #e9e60d; /* Color llamativo (amarillo) */
+    text-align: center; /* Centra el texto */
+    text-transform: uppercase; /* Convierte el texto a mayúsculas */
+    letter-spacing: 0.1em; /* Espaciado relativo entre letras */
+    padding: 2%; /* Espaciado interno relativo al contenedor */
+    background-color: #eb0c0c; /* Fondo oscuro */
+    color: #fff; /* Texto blanco */
+    border: 0.2em solid #000000; /* Borde amarillo en valores relativos */
+    border-radius: 1%; /* Bordes redondeados */
+    margin-bottom: 2%; /* Separación inferior relativa */
+    width: 90%; /* Ajusta el ancho de manera responsiva */
+    margin-left: auto; /* Centra horizontalmente */
+    margin-right: auto; /* Centra horizontalmente */
+}
+
+/*aplica estilos a las celdas celdas de encabezado (<th>) y celdas de datos de la tabla*/
+th, td {
+    padding: calc(var(--spacing-unit) * 1.5);
+    border: 1px solid var(--primary-color);
+    text-align: left;
+}
+
+/*cuando pasa el ratón por la celdas*/
+td:hover, th:hover {
+    background-color: rgba(0, 0, 0, 0.1); /* Fondo ligeramente más oscuro */
+    color: var(--primary-color); /* Resalta el texto */
+    cursor: pointer; /* Cambia el cursor a pointer */
+}
+
+
+/* Letra de la tabla de sombrero */
+th {
+    background-color: var(--primary-color);
+    color: #fff;
+    font-weight: bold;
+}
+
+
+/* FORMULARIOS */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-unit);
+    margin: var(--spacing-unit) 0;
+}
+
+
+ /*Estos estilos se aplican a los elementos de formulario HTML*/
+input, select, textarea {
+    width: 100%;
+    padding: 1rem; /* Espaciado relativo */
+    border: 1px solid var(--primary-color);
+    border-radius: 0.25rem; /* Unidades relativas */
+    font-family: var(--font-family);
+    font-size: var(--font-size-base);
+}
+
+/*cuando pasa el ratón por el menu principal*/
+input:focus, select:focus, textarea:focus {
+    border-color: #333;
+    outline: none;
+}
+
+
+button {
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    padding: 1rem;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    font-size: var(--font-size-base);
+    text-align: center;
+}
+
+/** focus para que cuando se preciona el formulario*/
+input:focus, select:focus, textarea:focus {
+    border-color: var(--primary-color); /* Cambia el borde */
+    box-shadow: 0 0 5px #e9e60d; /* Resalta el elemento */
+    outline: none; /* Elimina el borde predeterminado */
+}
+
+
+button:hover {
+    background-color: #000000;
+}
+
+
+/* ENLACES */
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* ESPACIADO ENTRE SECCIONES */
+section {
+    margin-bottom: calc(var(--spacing-unit) * 3);
+    padding: var(--spacing-unit);
+    background-color: #fff;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para el encabezado */
+header {
+    text-align: center;
+    background-color: #f4f4f4; /* Color de fondo del encabezado */
+    padding: 2%; /* Porcentaje para adaptarse mejor al ancho de la pantalla */
+    border-bottom: 2px solid #ddd;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+    font-family: 'Georgia', serif;
+    color: #000000;
+}
+
+/* menú de navegación centrado y organizado de manera horizontal. */
+nav ul {
+    display: flex; /* Organización horizontal */
+    justify-content: center; /* Centrar el menú */
+    list-style: none; /* Eliminar los puntos de la lista */
+    padding: 0;
+    margin: 2% 0 0; /* Márgenes en porcentaje */
+}
+
+nav ul li {
+    margin: 0 1%; /* Separación relativa entre los elementos */
+}
+
+nav ul li a {
+    text-decoration: none; /* Sin subrayado */
+    font-size: 1em;
+    font-family: 'Arial', sans-serif;
+    color: var(--primary-color); /* Color del texto */
+    padding: 0.5rem 1rem; /* Espaciado relativo */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Animación suave */
+}
+
+nav ul li a:hover {
+    background-color: #333; /* Fondo al pasar el cursor */
+    color: #fff; /* Texto en blanco al pasar el cursor */
+    border-radius: 0.25rem; /* Bordes redondeados */
+}
+
+
+
+/* RESPONSIVIDAD */
+
+
+
+/* Pantallas muy pequeñas (0px a 480px) */
+@media (max-width: 480px) and (min-width: 0px) {
+   
+    body {
+        margin: 0;
+        padding: 0;
+        width: 100vw; /* Asegura que ocupe todo el ancho */
+        overflow-x: hidden; /* Evita cualquier desbordamiento horizontal */
+    }
+
+    section, header {
+        width: 100%;
+        margin: 0;
+        padding: 1rem;
+        box-sizing: border-box; /* Asegura que los padding no excedan el ancho */
+    }
+   
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 1% 0;
+        text-align: center;
+        width: 100%;
+    }
+
+    nav ul li a {
+        display: block;
+        text-align: center;
+    }
+
+    table {
+        width: 100%;
+        max-width: 100%; /* Asegura que no se desborde */
+        overflow-x: auto; /* Permite desplazamiento horizontal si es necesario */
+        display: block; /* Hace que la tabla sea más flexible */
+    }
+    
+    video{
+        width: 100%;
+        max-width: 100%; /* Asegura que no se desborde */
+        overflow-x: auto; /* Permite desplazamiento horizontal si es necesario */
+        display: block;
+    }
+  
+}
+
+/* Pantallas pequeñas (481px a 768px) */
+@media (max-width: 768px) and (min-width: 481px) {
+    
+    body {
+        margin: 0;
+        padding: 0;
+        width: 100%; /* Asegura que ocupe todo el ancho */
+        overflow-x: hidden; /* Evita cualquier desbordamiento horizontal */
+    }
+
+    section, header {
+        width: 100%;
+        margin: 0;
+        padding: 1rem;
+        box-sizing: border-box; /* Asegura que los padding no excedan el ancho */
+    }
+    
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 1% 0;
+        text-align: center;
+        width: 100%;
+    }
+
+    nav ul li a {
+        display: block;
+        text-align: center;
+    }
+
+    table {
+        width: 100%;
+        max-width: 100%; /* Asegura que no se desborde */
+        overflow-x: auto; /* Permite desplazamiento horizontal si es necesario */
+        display: block; /* Hace que la tabla sea más flexible */
+    }
+
+    video{
+        width: 100%;
+        max-width: 100%; /* Asegura que no se desborde */
+        overflow-x: auto; /* Permite desplazamiento horizontal si es necesario */
+        display: block;
+    }
+}
+
+/* Pantallas medianas (769px a 1023px) */
+@media (max-width: 1023px) and (min-width: 769px) {
+    section {
+        min-height: 60vh;
+        padding: 2rem;
+    }
+}
+
