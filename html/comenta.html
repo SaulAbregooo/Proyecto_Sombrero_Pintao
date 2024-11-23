@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Saúl Abrego, Xavier González, Carlos Sánchez">
+        <meta name="description" content="Proyecto Final - Página web sobre el sombrero pintao">
+        <meta name="keywords" content="sombrero pintao, Panamá, cultura, tradición, artesanía">
+        <title>El Sombrero Pintao Panameño</title>
+        <link rel="stylesheet" href="styles.css"/>
+    </head>
+    <body>
+        <h2>Formulario de Contacto</h2>
+        
+        <aside>
+            <p>Si deseas más información, contáctanos a través del siguiente formulario:</p>
+        </aside>
+        <section>
+            <form>
+                <!-- nombre con validación requerida y placeholder -->
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre completo" required>
+                <br><br>
+    
+                <!-- Campo de correo electrónico con validación requerida -->
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="correo@ejemplo.com" required>
+                <br><br>
+    
+                <!-- Campo de teléfono con validación de patrón y ayuda contextual -->
+                <label for="telefono">Teléfono:</label>
+                <input type="tel" id="telefono" name="telefono" placeholder="123-456-7890" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" title="Formato: 123-456-7890">
+                <br><br>
+    
+                <!-- Área de texto con validación -->
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" name="mensaje" placeholder="Escribe tu mensaje aquí" required></textarea>
+                <br><br>
+    
+                <!-- Botón de envío -->
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+
+        <section> <!--Regreso a la pagina-->
+            <h2>Regresar a la pagina principal</h2>
+            <aside>
+                <a href="../Index.html">Regresar</a>
+            </aside>
+        </section>
+    </body>
+</html>
