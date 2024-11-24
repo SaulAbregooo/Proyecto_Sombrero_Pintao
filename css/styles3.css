@@ -1,0 +1,15 @@
+/*boton para ir al formulario*/
+.btn {
+    font-size: 1em;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    background-color: #ff0000;
+    color: white;
+}
+
+.btn:hover {
+    background-color: #0056b3; /* Azul más oscuro al pasar el cursor */
+}

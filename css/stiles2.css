@@ -1,0 +1,354 @@
+/* Estilo general para la galería de imagenes*/
+/*Aqui el titulo*/
+/**/#GaleriaDeImagenes h3 {
+    margin: 0 auto; /* Alinea el título y elimina márgenes innecesarios */
+    background-color: #6ff9b8; /* Fondo del título */
+    color: #e50012;
+    font-size: 2em;
+    text-align: center;
+    padding: 10px 20px; /* Espaciado interno */
+    border-radius: 10px; /* Esquinas redondeadas */
+}
+
+.imagenes {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr); /* Por defecto, 1 columna */
+    gap: 15px;
+}
+/* Ajustes para pantallas medianas */
+@media (min-width: 576px) {
+    .imagenes {
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas */
+    }
+}
+/* Ajustes para pantallas grandes */
+@media (min-width: 768px) {
+    .imagenes {
+        grid-template-columns: repeat(3, 1fr); /* 3 columnas */
+    }
+}
+/* Ajustes para pantallas muy grandes */
+@media (min-width: 992px) {
+    .imagenes {
+        grid-template-columns: repeat(4, 1fr); /* 4 columnas */
+    }
+}
+/* Estilo adicional para los figcaptions si es necesario */
+.imagenes figure {
+    text-align: center;
+    margin-bottom: 15px;
+}
+.imagenes figcaption {
+    font-size: 1.1em;
+    color: #555;
+    margin-top: 10px;
+}
+/*Aplicando hover*/
+.imagenes figure {
+    position: relative; /* Necesario para posicionar el figcaption sobre la imagen */
+    overflow: hidden;   /* Asegura que el efecto no sobresalga de la imagen */
+}
+/* Estilo para la imagen */
+.imagenes img {
+    transition: transform 0.3s ease; /* Aplica la transición solo a la imagen */
+}
+.imagenes figure:hover img {
+    transform: scale(1.05); /* Agranda la imagen al pasar el ratón */
+}
+/*solo texto*/
+.imagenes figcaption {/*duracion*/
+    font-size: 1.1em;
+    color: #555;
+    margin-top: 10px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+.imagenes figcaption:hover {
+    color: #007bff;  /* Cambia el color del texto*/
+    transform: scale(1.05);  /* vuelve mas grande el texto*/
+}
+/*fonodo para contrasta con la imagen de fondo*/
+#GaleriaDeImagenes figcaption {
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo negro semitransparente */
+    color: #ffffff; /* Texto blanco */
+    padding: 5px 10px; /* Espaciado interno */
+    border-radius: 5px; /* Esquinas redondeadas (opcional) */
+    display: inline-block; /* Ajusta el ancho al contenido */
+}
+/*iamgen de fondo de la galeria*/
+#GaleriaDeImagenes {
+    background-image: url('../img/fondoGaleria.jpg');
+    background-size: cover; /*imagen cubra todo el área */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    padding: 20px; /* Agrega espacio interno para el contenido */
+    color: #fff; /* Cambia el color del texto para que contraste */
+}
+
+/*--------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------*/
+/*Probando Keyframes*/
+/*cargar el titulo*/
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#GaleriaDeImagenes h3 {
+    animation: slideIn 1s ease-out; /* Duración de la animación */
+    background-color: #6ff9b8; 
+    color: #e50012;;
+    font-size: 2em;
+    text-align: center;
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+/*crecer... bueno acercar la escala de la imagen*/
+@keyframes scaleImage {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.1); /* Aumenta un 10% */
+    }
+}
+
+#GaleriaDeImagenes figure img {
+    transition: transform 0.3s ease;
+}
+
+#GaleriaDeImagenes figure:hover img {
+    animation: scaleImage 0.3s ease forwards;
+}
+/*aparecer de izquierda*/
+@keyframes moveRight {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+#GaleriaDeImagenes {
+    animation: moveRight 1.5s ease-out forwards;
+}
+/*cambiar de color el titulo*/
+@keyframes changeColor {
+    0% {
+        background-color: #6ff9b8;
+    }
+    50% {
+        background-color: #ffcc00;
+    }
+    100% {
+        background-color: #6ff9b8;
+    }
+}
+
+#GaleriaDeImagenes h3:hover {
+    animation: changeColor 1s ease-in-out infinite;
+}
+/*una imagen detras de otra*/
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px); /* Mueve ligeramente hacia abajo */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* Posición original */
+    }
+}
+
+#GaleriaDeImagenes figure {
+    opacity: 0; /* Oculta las imágenes inicialmente */
+    animation: fadeIn 1s ease-out forwards; /* Duración y animación */
+}
+
+/* Retrasos para cada imagen */
+#GaleriaDeImagenes figure:nth-child(1) {
+    animation-delay: 0.5s;
+}
+#GaleriaDeImagenes figure:nth-child(2) {
+    animation-delay: 1s;
+}
+#GaleriaDeImagenes figure:nth-child(3) {
+    animation-delay: 1.5s;
+}
+#GaleriaDeImagenes figure:nth-child(4) {
+    animation-delay: 2s;
+}
+#GaleriaDeImagenes figure:nth-child(5) {
+    animation-delay: 2.5s;
+}
+#GaleriaDeImagenes figure:nth-child(6) {
+    animation-delay: 3s;
+}
+#GaleriaDeImagenes figure:nth-child(7) {
+    animation-delay: 3.5s;
+}
+#GaleriaDeImagenes figure:nth-child(8) {
+    animation-delay: 4s;
+}
+
+/*--------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------*/
+/*Video*/
+/* Estilo para la sección de video */
+#Video {
+    display: flex;               /* Usamos flexbox para organizar los elementos */
+    flex-direction: column;      /* Alinea los elementos en columna (título arriba y video abajo) */
+    justify-content: center;     /* Centra el contenido verticalmente */
+    align-items: center;         /* Centra el contenido horizontalmente */
+    height: 480px;               /* Altura del contenedor */
+    background-color: #f5f5dc;   /* Fondo color crema claro */
+    background-image: url('../img/fondoVideo2.jpg'); /* Si prefieres usar una imagen de fondo */
+    background-size: cover;      /* Asegura que el fondo cubra todo el área del contenedor */
+    background-position: center; /* Centra la imagen de fondo */
+    padding: 20px;               /* Espaciado alrededor del video */
+    border-radius: 10px;         /* Opcional, para bordes redondeados */
+    text-align: center;          /* Centra el texto dentro de la sección */
+    position: relative;          /* Necesario para posicionar el fondo y el video correctamente */
+    animation: changeColor 5s infinite, slideIn 1s ease-out; /* Animación de cambio de color y deslizamiento */
+}
+
+/* Animación de cambio de color para el fondo - no se muestra bien por la imagen */
+@keyframes changeColor {
+    0% {
+        background-color: #f5f5dc; /* Fondo color crema claro */
+    }
+    50% {
+        background-color: #baf551 /* Fondo amarillo */
+    }
+    100% {
+        background-color: #f5f5dc; /* Fondo color crema claro */
+    }
+}
+
+/* Animación para deslizar el contenido desde la derecha */
+@keyframes slideIn {
+    0% {
+        transform: translateX(100%); /* Comienza desde el lado derecho */
+    }
+    100% {
+        transform: translateX(0); /* Termina en el centro */
+    }
+}
+
+/* Estilo para el título */
+#Video header {
+    margin-bottom: 20px;         /* Espacio entre el título y el video */
+    color: #1e3d58;              /* Color del texto azul */
+    background-color: #f5f5dc;   /* Fondo color crema claro */
+    font-size: 1.5em;            /* Tamaño del texto del título */
+    padding: 10px 20px;          /* Añade espacio alrededor del texto */
+    border-radius: 8px;          /* Esquinas redondeadas */
+    animation: slideIn 1s ease-out; /* Animación para deslizar el título */
+}
+
+/* Estilo para el video */
+#Video video {
+    max-width: 100%;             /* Asegura que el video no se desborde */
+    max-height: 100%;            /* Hace que el video se ajuste dentro del contenedor */
+    border-radius: 8px;          /* Bordes redondeados para el video */
+    animation: slideIn 1s ease-out; /* Animación para deslizar el video */
+}
+
+/*--------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------*/
+/*Audio*/
+/* Estilo general del contenedor de audio */
+/* Personalización del contenedor de audio */
+/* Estilo general del contenedor de audio */
+/* Estilo general para la sección de audio */
+/* Estilo general para la sección de audio */
+#Audiot {
+    display: flex;
+    flex-direction: column; /* Organiza los elementos en columna */
+    align-items: center; /* Centra los elementos horizontalmente */
+    justify-content: center; /* Centra los elementos verticalmente */
+    padding: 20px; /* Espaciado interno */
+    background-image: url('../img/Vision\ en\ Blanco\ by\ Al\ Sprague.png'); /* Añade la imagen de fondo */
+    background-size: cover; /* La imagen cubre todo el contenedor */
+    background-position: center; /* Centra la imagen de fondo */
+    background-repeat: no-repeat; /* Evita la repetición del fondo */
+    width: 100%; /* El ancho ocupa todo el contenedor padre */
+    min-height: 70vh; /* La altura mínima será la mitad de la altura de la ventana */
+    background-color: rgba(255, 255, 255, 0.6); /* Fondo semitransparente */
+    backdrop-filter: blur(10px); /* Aplica un desenfoque al fondo */
+    border-radius: 10px; /* Esquinas redondeadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    margin: 0; /* Sin márgenes externos */
+}
+
+/* Estilo del título */
+#Audiot header h3 {
+    color: #1e3d58; /* Color azul oscuro */
+    font-size: 1.8em; /* Tamaño del texto */
+    margin-bottom: 10px; /* Espaciado inferior */
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo semitransparente para destacar el texto */
+    padding: 10px; /* Espaciado interno del título */
+    border-radius: 5px; /* Bordes redondeados para el título */
+}
+
+/* Estilo del reproductor de audio */
+#Audiot audio {
+    margin-top: 10px; /* Espaciado superior */
+    width: 100%; /* El audio ocupa todo el ancho disponible */
+    border-radius: 8px; /* Esquinas redondeadas */
+}
+
+/* Contenedor de los botones */
+#Audiot div {
+    margin-top: 15px; /* Espaciado superior respecto al reproductor */
+    display: flex;
+    gap: 10px; /* Espaciado entre los botones */
+}
+
+/* Estilo de los botones */
+#Audiot .btn {
+    font-size: 1em; /* Tamaño del texto */
+    padding: 10px 20px; /* Espaciado interno */
+    border: none; /* Elimina el borde */
+    border-radius: 5px; /* Esquinas redondeadas */
+    cursor: pointer; /* Cambia el cursor al pasar por el botón */
+    transition: background-color 0.3s ease; /* Transición suave */
+}
+
+/* Botón ON */
+#Audiot .btn-success {
+    background-color: #28a745; /* Verde */
+    color: white;
+}
+
+#Audiot .btn-success:hover {
+    background-color: #218838; /* Verde oscuro al pasar el cursor */
+}
+
+/* Botón OFF */
+#Audiot .btn-danger {
+    background-color: #dc3545; /* Rojo */
+    color: white;
+}
+
+#Audiot .btn-danger:hover {
+    background-color: #c82333; /* Rojo oscuro al pasar el cursor */
+}
+
+
+
+
