@@ -108,6 +108,7 @@ table {
 
 /*titulo de la tabla*/
 caption {
+    caption-side: top;
     font-family: 'Georgia', serif; /* Fuente elegante */
     font-size: 120%; /* Tamaño relativo al contenedor */
     color: #e9e60d; /* Color llamativo (amarillo) */
