@@ -99,5 +99,5 @@ En esta etapa se busca ampliar el proyecto HTML5 de la Etapa 1 aplicando estilos
 ---
 
 ## Enlace a la Página
-Accede al sitio web aquí: [Proyecto Sombrero Pintao](https://saulabregooo.github.io/Proyecto_Sombrero_Pintao/Proyecto_Sombrero.html)
+Accede al sitio web aquí: [Proyecto Sombrero Pintao](https://saulabregooo.github.io/Proyecto_Sombrero_Pintao/index.html)
 
