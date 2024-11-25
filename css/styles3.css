@@ -37,12 +37,7 @@ body {
 }
 
 /* Estilos para el encabezado */
-header {
-    text-align: center;
-    background: #333;
-    color: #fff;
-    padding: 1em 0;
-}
+
 
 header h1 {
     margin: 0;
