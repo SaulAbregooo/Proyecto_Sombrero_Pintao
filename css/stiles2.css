@@ -1,33 +1,34 @@
 /* Estilo general para la galería de imagenes*/
-/*Aqui el titulo*/
-/**/#GaleriaDeImagenes h3 {
-    margin: 0 auto; /* Alinea el título y elimina márgenes innecesarios */
-    background-color: #6ff9b8; /* Fondo del título */
-    color: #e50012;
-    font-size: 2em;
-    text-align: center;
-    padding: 10px 20px; /* Espaciado interno */
-    border-radius: 10px; /* Esquinas redondeadas */
-}
 
+#GaleriaDeImagenes h3 {
+    margin: 0 auto;
+    background-color: #6ff9b8;
+    color: #e50012;
+    font-size: 2em;/*ajuste de texto*/
+    text-align: center;
+    padding: 10px 20px;
+    border-radius: 10px;
+}/*Para el titulo*/
+
+/*grid es cuadricula, template define estructura*/
 .imagenes {
     display: grid;
-    grid-template-columns: repeat(1, 1fr); /* Por defecto, 1 columna */
+    grid-template-columns: repeat(1, 1fr);
     gap: 15px;
 }
-/* Ajustes para pantallas medianas */
+/* Pantallas medianas, repeat propiedad de cuadricula*/
 @media (min-width: 576px) {
     .imagenes {
         grid-template-columns: repeat(2, 1fr); /* 2 columnas */
     }
 }
-/* Ajustes para pantallas grandes */
+/* Pantallas grandes */
 @media (min-width: 768px) {
     .imagenes {
         grid-template-columns: repeat(3, 1fr); /* 3 columnas */
     }
 }
-/* Ajustes para pantallas muy grandes */
+/*Pantallas muy grandes */
 @media (min-width: 992px) {
     .imagenes {
         grid-template-columns: repeat(4, 1fr); /* 4 columnas */
@@ -38,6 +39,7 @@
     text-align: center;
     margin-bottom: 15px;
 }
+/*titulo de la imagen*/
 .imagenes figcaption {
     font-size: 1.1em;
     color: #555;
@@ -68,20 +70,20 @@
 }
 /*fonodo para contrasta con la imagen de fondo*/
 #GaleriaDeImagenes figcaption {
-    background-color: rgba(0, 0, 0, 0.5); /* Fondo negro semitransparente */
-    color: #ffffff; /* Texto blanco */
-    padding: 5px 10px; /* Espaciado interno */
-    border-radius: 5px; /* Esquinas redondeadas (opcional) */
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #ffffff;
+    padding: 5px 10px;
+    border-radius: 5px;
     display: inline-block; /* Ajusta el ancho al contenido */
 }
 /*iamgen de fondo de la galeria*/
 #GaleriaDeImagenes {
     background-image: url('../img/fondoGaleria.jpg');
-    background-size: cover; /*imagen cubra todo el área */
+    background-size: cover;/*cubre*/
     background-position: center; /* Centra la imagen */
-    background-repeat: no-repeat; /* Evita que la imagen se repita */
-    padding: 20px; /* Agrega espacio interno para el contenido */
-    color: #fff; /* Cambia el color del texto para que contraste */
+    background-repeat: no-repeat; /* Evita repetir*/
+    padding: 20px;
+    color: #fff;
 }
 
 /*--------------------------------------------------------------------------------------------------*/
@@ -117,7 +119,7 @@
         transform: scale(1);
     }
     100% {
-        transform: scale(1.1); /* Aumenta un 10% */
+        transform: scale(1.1);
     }
 }
 
@@ -126,7 +128,7 @@
 }
 
 #GaleriaDeImagenes figure:hover img {
-    animation: scaleImage 0.3s ease forwards;
+    animation: scaleImage 0.3s ease forwards;/*forwards-permanecer*/
 }
 /*aparecer de izquierda*/
 @keyframes moveRight {
@@ -248,21 +250,21 @@
 
 /* Estilo para el título */
 #Video header {
-    margin-bottom: 20px;         /* Espacio entre el título y el video */
-    color: #1e3d58;              /* Color del texto azul */
-    background-color: #f5f5dc;   /* Fondo color crema claro */
-    font-size: 1.5em;            /* Tamaño del texto del título */
-    padding: 10px 20px;          /* Añade espacio alrededor del texto */
-    border-radius: 8px;          /* Esquinas redondeadas */
-    animation: slideIn 1s ease-out; /* Animación para deslizar el título */
+    margin-bottom: 20px;
+    color: #1e3d58;     
+    background-color: #f5f5dc;
+    font-size: 1.5em;   
+    padding: 10px 20px; 
+    border-radius: 8px;  
+    animation: slideIn 1s ease-out;
 }
 
 /* Estilo para el video */
 #Video video {
-    max-width: 100%;             /* Asegura que el video no se desborde */
-    max-height: 100%;            /* Hace que el video se ajuste dentro del contenedor */
-    border-radius: 8px;          /* Bordes redondeados para el video */
-    animation: slideIn 1s ease-out; /* Animación para deslizar el video */
+    max-width: 100%;             /*No desborde */
+    max-height: 100%;            
+    border-radius: 8px;         
+    animation: slideIn 1s ease-out; 
 }
 
 /*--------------------------------------------------------------------------------------------------*/
@@ -278,75 +280,75 @@
 #Audiot {
     display: flex;
     flex-direction: column; /* Organiza los elementos en columna */
-    align-items: center; /* Centra los elementos horizontalmente */
-    justify-content: center; /* Centra los elementos verticalmente */
-    padding: 20px; /* Espaciado interno */
-    background-image: url('../img/Vision\ en\ Blanco\ by\ Al\ Sprague.png'); /* Añade la imagen de fondo */
-    background-size: cover; /* La imagen cubre todo el contenedor */
-    background-position: center; /* Centra la imagen de fondo */
-    background-repeat: no-repeat; /* Evita la repetición del fondo */
-    width: 100%; /* El ancho ocupa todo el contenedor padre */
-    min-height: 70vh; /* La altura mínima será la mitad de la altura de la ventana */
-    background-color: rgba(255, 255, 255, 0.6); /* Fondo semitransparente */
+    align-items: center;
+    justify-content: center; 
+    padding: 20px;
+    background-image: url('../img/Vision\ en\ Blanco\ by\ Al\ Sprague.png');
+    background-size: cover;
+    background-position: center; 
+    background-repeat: no-repeat; 
+    width: 100%;
+    min-height: 70vh; 
+    background-color: rgba(255, 255, 255, 0.6);
     backdrop-filter: blur(10px); /* Aplica un desenfoque al fondo */
-    border-radius: 10px; /* Esquinas redondeadas */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
-    margin: 0; /* Sin márgenes externos */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    margin: 0;
 }
 
 /* Estilo del título */
 #Audiot header h3 {
-    color: #1e3d58; /* Color azul oscuro */
-    font-size: 1.8em; /* Tamaño del texto */
-    margin-bottom: 10px; /* Espaciado inferior */
+    color: #1e3d58; 
+    font-size: 1.8em; 
+    margin-bottom: 10px; 
     text-align: center;
-    background-color: rgba(255, 255, 255, 0.8); /* Fondo semitransparente para destacar el texto */
-    padding: 10px; /* Espaciado interno del título */
-    border-radius: 5px; /* Bordes redondeados para el título */
+    background-color: rgba(255, 255, 255, 0.8); 
+    padding: 10px;
+    border-radius: 5px; 
 }
 
 /* Estilo del reproductor de audio */
 #Audiot audio {
-    margin-top: 10px; /* Espaciado superior */
-    width: 100%; /* El audio ocupa todo el ancho disponible */
-    border-radius: 8px; /* Esquinas redondeadas */
+    margin-top: 10px; 
+    width: 100%;
+    border-radius: 8px; 
 }
 
 /* Contenedor de los botones */
 #Audiot div {
-    margin-top: 15px; /* Espaciado superior respecto al reproductor */
+    margin-top: 15px;
     display: flex;
-    gap: 10px; /* Espaciado entre los botones */
+    gap: 10px; 
 }
 
 /* Estilo de los botones */
 #Audiot .btn {
-    font-size: 1em; /* Tamaño del texto */
-    padding: 10px 20px; /* Espaciado interno */
-    border: none; /* Elimina el borde */
-    border-radius: 5px; /* Esquinas redondeadas */
-    cursor: pointer; /* Cambia el cursor al pasar por el botón */
-    transition: background-color 0.3s ease; /* Transición suave */
+    font-size: 1em; 
+    padding: 10px 20px; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-/* Botón ON */
+/* Botón reproducir */
 #Audiot .btn-success {
-    background-color: #28a745; /* Verde */
+    background-color: #28a745;
     color: white;
 }
 
 #Audiot .btn-success:hover {
-    background-color: #218838; /* Verde oscuro al pasar el cursor */
+    background-color: #218838;
 }
 
-/* Botón OFF */
+/* Botón detener */
 #Audiot .btn-danger {
-    background-color: #dc3545; /* Rojo */
+    background-color: #dc3545; 
     color: white;
 }
 
 #Audiot .btn-danger:hover {
-    background-color: #c82333; /* Rojo oscuro al pasar el cursor */
+    background-color: #c82333; 
 }
 
 
